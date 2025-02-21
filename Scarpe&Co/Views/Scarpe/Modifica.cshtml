@@ -1,0 +1,41 @@
+﻿@using ScarpeCo.Models;  // Importa la classe Scarpa
+
+@model Scarpa
+
+@{
+    ViewData["Title"] = "Modifica Scarpa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2>Modifica Scarpa</h2>
+    <form asp-action="Modifica" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div class="mb-3">
+            <label class="form-label">Nome</label>
+            <input type="text" class="form-control" asp-for="Nome">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Prezzo</label>
+            <input type="number" class="form-control" asp-for="Prezzo" step="0.01">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Descrizione</label>
+            <textarea class="form-control" asp-for="Descrizione"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Copertina (URL immagine)</label>
+            <input type="text" class="form-control" asp-for="Copertina">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Immagine 1</label>
+            <input type="text" class="form-control" asp-for="Img1">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Immagine 2</label>
+            <input type="text" class="form-control" asp-for="Img2">
+        </div>
+        <button type="submit" class="btn btn-success">Salva Modifiche</button>
+        <a href="@Url.Action("Index", "Scarpe")" class="btn btn-secondary">Annulla</a>
+    </form>
+</div>
