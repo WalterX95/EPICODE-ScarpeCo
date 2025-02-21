@@ -1,4 +1,4 @@
-﻿@using ScarpeCo.Models;  // Importa la classe Scarpa
+﻿@using ScarpeCo.Models;  
 
 @model List<Scarpa>
 
@@ -14,7 +14,7 @@
         {
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img src="~/images/@scarpa.Copertina" class="card-img-top" alt="@scarpa.Nome">
+                    <img src="@scarpa.Copertina" class="card-img-top" alt="@scarpa.Nome">
                     <div class="card-body">
                         <h5 class="card-title">@scarpa.Nome</h5>
                         <p class="card-text">Prezzo: €@scarpa.Prezzo</p>
